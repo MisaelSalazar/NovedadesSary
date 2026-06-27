@@ -26,7 +26,11 @@ public class NovedadesSary {
         }
 
         SwingUtilities.invokeLater(() -> {
-            new Login().setVisible(true);
+            Login objLogin = new Login();
+            objLogin.setLocationRelativeTo(null);
+            objLogin.setVisible(true);
+            //new Login().setLocationRelativeTo(null);
+            //new Login().setVisible(true);
         });
     }
 }

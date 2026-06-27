@@ -158,6 +158,7 @@ public class Login extends javax.swing.JFrame {
         Home objHome = new Home();
         JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(btnIngresar);
         frame.dispose();
+        objHome.setLocationRelativeTo(null);
         objHome.setVisible(true);
     }//GEN-LAST:event_btnIngresarActionPerformed
 

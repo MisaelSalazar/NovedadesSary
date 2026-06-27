@@ -17,6 +17,15 @@ public class Home extends javax.swing.JFrame {
      */
     public Home() {
         initComponents();
+        PanelInicio.setVisible(true);
+        PanelControlCatalogos.setVisible(false);
+        PanelControlVentas.setVisible(false);
+        PanelControlInventario.setVisible(false);
+        PanelControlEmpleados.setVisible(false);
+        PanelControlVehiculos.setVisible(false);
+        PanelControlBodegas.setVisible(false);
+        PanelControlSistema.setVisible(false);
+        PanelUtilerias.setVisible(false);
     }
 
     /**
@@ -32,15 +41,15 @@ public class Home extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
         MenuLateral = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        btnMenuControlVentas = new javax.swing.JLabel();
+        btnMenuCatalogos = new javax.swing.JLabel();
+        btnMenuInventarios = new javax.swing.JLabel();
+        btnMenuEmpleados = new javax.swing.JLabel();
+        btnMenuVehiculos = new javax.swing.JLabel();
+        btnMenuBodegas = new javax.swing.JLabel();
+        btnMenuControlSistema = new javax.swing.JLabel();
+        btnMenuUtilerias = new javax.swing.JLabel();
+        btnMenuInicio = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -58,6 +67,46 @@ public class Home extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         btnSettings = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
+        PanelControlCatalogos = new javax.swing.JPanel();
+        Header1 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        btnSettings1 = new javax.swing.JButton();
+        PanelControlVentas = new javax.swing.JPanel();
+        Header2 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        btnSettings2 = new javax.swing.JButton();
+        PanelControlInventario = new javax.swing.JPanel();
+        Header3 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        btnSettings3 = new javax.swing.JButton();
+        PanelControlEmpleados = new javax.swing.JPanel();
+        Header4 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        btnSettings4 = new javax.swing.JButton();
+        PanelControlVehiculos = new javax.swing.JPanel();
+        Header5 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        btnSettings5 = new javax.swing.JButton();
+        PanelControlBodegas = new javax.swing.JPanel();
+        Header6 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        btnSettings6 = new javax.swing.JButton();
+        PanelControlSistema = new javax.swing.JPanel();
+        Header7 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        btnSettings7 = new javax.swing.JButton();
+        PanelUtilerias = new javax.swing.JPanel();
+        Header8 = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        btnSettings8 = new javax.swing.JButton();
 
         jMenu1.setText("jMenu1");
 
@@ -73,61 +122,113 @@ public class Home extends javax.swing.JFrame {
 
         MenuLateral.setBackground(new java.awt.Color(53, 53, 53));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shopping-cart.png"))); // NOI18N
-        jLabel3.setText(" Control de ventas");
-        jLabel3.setToolTipText("");
+        btnMenuControlVentas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnMenuControlVentas.setForeground(new java.awt.Color(255, 255, 255));
+        btnMenuControlVentas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shopping-cart.png"))); // NOI18N
+        btnMenuControlVentas.setText(" Control de ventas");
+        btnMenuControlVentas.setToolTipText("");
+        btnMenuControlVentas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMenuControlVentas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnMenuControlVentasMouseClicked(evt);
+            }
+        });
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/align-left.png"))); // NOI18N
-        jLabel4.setText(" Control de catalogo");
-        jLabel4.setToolTipText("");
-        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMenuCatalogos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnMenuCatalogos.setForeground(new java.awt.Color(255, 255, 255));
+        btnMenuCatalogos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/align-left.png"))); // NOI18N
+        btnMenuCatalogos.setText(" Control de catalogo");
+        btnMenuCatalogos.setToolTipText("");
+        btnMenuCatalogos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMenuCatalogos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnMenuCatalogosMouseClicked(evt);
+            }
+        });
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/home.png"))); // NOI18N
-        jLabel5.setText("Control de inventarios");
-        jLabel5.setToolTipText("");
+        btnMenuInventarios.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnMenuInventarios.setForeground(new java.awt.Color(255, 255, 255));
+        btnMenuInventarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/home.png"))); // NOI18N
+        btnMenuInventarios.setText("Control de inventarios");
+        btnMenuInventarios.setToolTipText("");
+        btnMenuInventarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMenuInventarios.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnMenuInventariosMouseClicked(evt);
+            }
+        });
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/employee.png"))); // NOI18N
-        jLabel6.setText(" Control de empleados");
-        jLabel6.setToolTipText("");
+        btnMenuEmpleados.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnMenuEmpleados.setForeground(new java.awt.Color(255, 255, 255));
+        btnMenuEmpleados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/employee.png"))); // NOI18N
+        btnMenuEmpleados.setText(" Control de empleados");
+        btnMenuEmpleados.setToolTipText("");
+        btnMenuEmpleados.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMenuEmpleados.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnMenuEmpleadosMouseClicked(evt);
+            }
+        });
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/delivery-truck.png"))); // NOI18N
-        jLabel7.setText(" Control de vehículos");
-        jLabel7.setToolTipText("");
+        btnMenuVehiculos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnMenuVehiculos.setForeground(new java.awt.Color(255, 255, 255));
+        btnMenuVehiculos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/delivery-truck.png"))); // NOI18N
+        btnMenuVehiculos.setText(" Control de vehículos");
+        btnMenuVehiculos.setToolTipText("");
+        btnMenuVehiculos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMenuVehiculos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnMenuVehiculosMouseClicked(evt);
+            }
+        });
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/box.png"))); // NOI18N
-        jLabel8.setText(" Control de bodegas");
-        jLabel8.setToolTipText("");
+        btnMenuBodegas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnMenuBodegas.setForeground(new java.awt.Color(255, 255, 255));
+        btnMenuBodegas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/box.png"))); // NOI18N
+        btnMenuBodegas.setText(" Control de bodegas");
+        btnMenuBodegas.setToolTipText("");
+        btnMenuBodegas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMenuBodegas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnMenuBodegasMouseClicked(evt);
+            }
+        });
 
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bar-chart.png"))); // NOI18N
-        jLabel9.setText(" Control del sistema");
-        jLabel9.setToolTipText("");
+        btnMenuControlSistema.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnMenuControlSistema.setForeground(new java.awt.Color(255, 255, 255));
+        btnMenuControlSistema.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bar-chart.png"))); // NOI18N
+        btnMenuControlSistema.setText(" Control del sistema");
+        btnMenuControlSistema.setToolTipText("");
+        btnMenuControlSistema.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMenuControlSistema.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnMenuControlSistemaMouseClicked(evt);
+            }
+        });
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gear.png"))); // NOI18N
-        jLabel10.setText(" Utilerías");
-        jLabel10.setToolTipText("");
+        btnMenuUtilerias.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnMenuUtilerias.setForeground(new java.awt.Color(255, 255, 255));
+        btnMenuUtilerias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gear.png"))); // NOI18N
+        btnMenuUtilerias.setText(" Utilerías");
+        btnMenuUtilerias.setToolTipText("");
+        btnMenuUtilerias.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMenuUtilerias.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnMenuUtileriasMouseClicked(evt);
+            }
+        });
 
-        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/menu-button.png"))); // NOI18N
-        jLabel14.setText(" Inicio");
-        jLabel14.setToolTipText("");
-        jLabel14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMenuInicio.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnMenuInicio.setForeground(new java.awt.Color(255, 255, 255));
+        btnMenuInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/menu-button.png"))); // NOI18N
+        btnMenuInicio.setText(" Inicio");
+        btnMenuInicio.setToolTipText("");
+        btnMenuInicio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMenuInicio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnMenuInicioMouseClicked(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -163,15 +264,15 @@ public class Home extends javax.swing.JFrame {
                         .addGroup(MenuLateralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnMenuInventarios, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnMenuControlVentas, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnMenuCatalogos, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnMenuEmpleados, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnMenuVehiculos, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnMenuBodegas, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnMenuControlSistema, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnMenuUtilerias, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnMenuInicio, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(29, 29, 29))
         );
@@ -183,33 +284,34 @@ public class Home extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addComponent(jLabel13)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel14)
+                .addComponent(btnMenuInicio)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel4)
+                .addComponent(btnMenuCatalogos)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel3)
+                .addComponent(btnMenuControlVentas)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel5)
+                .addComponent(btnMenuInventarios)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel17)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
+                .addComponent(btnMenuEmpleados)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel7)
+                .addComponent(btnMenuVehiculos)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel8)
+                .addComponent(btnMenuBodegas)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel16)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel9)
+                .addComponent(btnMenuControlSistema)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel10)
+                .addComponent(btnMenuUtilerias)
                 .addGap(83, 83, 83))
         );
 
         getContentPane().add(MenuLateral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 570));
 
         PanelInicio.setBackground(new java.awt.Color(255, 255, 255));
+        PanelInicio.setEnabled(false);
 
         jButton2.setBackground(new java.awt.Color(21, 101, 192));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
@@ -341,14 +443,676 @@ public class Home extends javax.swing.JFrame {
 
         getContentPane().add(PanelInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 970, 570));
 
+        PanelControlCatalogos.setBackground(new java.awt.Color(255, 255, 255));
+        PanelControlCatalogos.setEnabled(false);
+
+        Header1.setBackground(new java.awt.Color(201, 166, 107));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel3.setText("Novedades Sary");
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel18.setText("Control Catalogo");
+        jLabel18.setToolTipText("");
+
+        btnSettings1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnSettings1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/settings.png"))); // NOI18N
+        btnSettings1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSettings1.addActionListener(this::btnSettings1ActionPerformed);
+
+        javax.swing.GroupLayout Header1Layout = new javax.swing.GroupLayout(Header1);
+        Header1.setLayout(Header1Layout);
+        Header1Layout.setHorizontalGroup(
+            Header1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Header1Layout.createSequentialGroup()
+                .addGroup(Header1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Header1Layout.createSequentialGroup()
+                        .addGap(388, 388, 388)
+                        .addComponent(jLabel3)
+                        .addGap(344, 344, 344))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Header1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel18)
+                        .addGap(370, 370, 370)))
+                .addComponent(btnSettings1)
+                .addGap(25, 25, 25))
+        );
+        Header1Layout.setVerticalGroup(
+            Header1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Header1Layout.createSequentialGroup()
+                .addGroup(Header1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Header1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel18))
+                    .addGroup(Header1Layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(btnSettings1)))
+                .addContainerGap(15, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout PanelControlCatalogosLayout = new javax.swing.GroupLayout(PanelControlCatalogos);
+        PanelControlCatalogos.setLayout(PanelControlCatalogosLayout);
+        PanelControlCatalogosLayout.setHorizontalGroup(
+            PanelControlCatalogosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Header1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        PanelControlCatalogosLayout.setVerticalGroup(
+            PanelControlCatalogosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelControlCatalogosLayout.createSequentialGroup()
+                .addComponent(Header1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(486, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(PanelControlCatalogos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 970, 570));
+
+        PanelControlVentas.setBackground(new java.awt.Color(255, 255, 255));
+        PanelControlVentas.setEnabled(false);
+
+        Header2.setBackground(new java.awt.Color(201, 166, 107));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel4.setText("Novedades Sary");
+
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel19.setText("Control Ventas");
+        jLabel19.setToolTipText("");
+
+        btnSettings2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnSettings2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/settings.png"))); // NOI18N
+        btnSettings2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSettings2.addActionListener(this::btnSettings2ActionPerformed);
+
+        javax.swing.GroupLayout Header2Layout = new javax.swing.GroupLayout(Header2);
+        Header2.setLayout(Header2Layout);
+        Header2Layout.setHorizontalGroup(
+            Header2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Header2Layout.createSequentialGroup()
+                .addGroup(Header2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Header2Layout.createSequentialGroup()
+                        .addGap(388, 388, 388)
+                        .addComponent(jLabel4)
+                        .addGap(344, 344, 344))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Header2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel19)
+                        .addGap(380, 380, 380)))
+                .addComponent(btnSettings2)
+                .addGap(25, 25, 25))
+        );
+        Header2Layout.setVerticalGroup(
+            Header2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Header2Layout.createSequentialGroup()
+                .addGroup(Header2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Header2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel19))
+                    .addGroup(Header2Layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(btnSettings2)))
+                .addContainerGap(15, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout PanelControlVentasLayout = new javax.swing.GroupLayout(PanelControlVentas);
+        PanelControlVentas.setLayout(PanelControlVentasLayout);
+        PanelControlVentasLayout.setHorizontalGroup(
+            PanelControlVentasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Header2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        PanelControlVentasLayout.setVerticalGroup(
+            PanelControlVentasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelControlVentasLayout.createSequentialGroup()
+                .addComponent(Header2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(486, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(PanelControlVentas, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 970, 570));
+
+        PanelControlInventario.setBackground(new java.awt.Color(255, 255, 255));
+        PanelControlInventario.setEnabled(false);
+
+        Header3.setBackground(new java.awt.Color(201, 166, 107));
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel5.setText("Novedades Sary");
+
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel20.setText("Control Inventarios");
+        jLabel20.setToolTipText("");
+
+        btnSettings3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnSettings3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/settings.png"))); // NOI18N
+        btnSettings3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSettings3.addActionListener(this::btnSettings3ActionPerformed);
+
+        javax.swing.GroupLayout Header3Layout = new javax.swing.GroupLayout(Header3);
+        Header3.setLayout(Header3Layout);
+        Header3Layout.setHorizontalGroup(
+            Header3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Header3Layout.createSequentialGroup()
+                .addGroup(Header3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Header3Layout.createSequentialGroup()
+                        .addGap(388, 388, 388)
+                        .addComponent(jLabel5)
+                        .addGap(344, 344, 344))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Header3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel20)
+                        .addGap(358, 358, 358)))
+                .addComponent(btnSettings3)
+                .addGap(25, 25, 25))
+        );
+        Header3Layout.setVerticalGroup(
+            Header3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Header3Layout.createSequentialGroup()
+                .addGroup(Header3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Header3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel20))
+                    .addGroup(Header3Layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(btnSettings3)))
+                .addContainerGap(15, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout PanelControlInventarioLayout = new javax.swing.GroupLayout(PanelControlInventario);
+        PanelControlInventario.setLayout(PanelControlInventarioLayout);
+        PanelControlInventarioLayout.setHorizontalGroup(
+            PanelControlInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Header3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        PanelControlInventarioLayout.setVerticalGroup(
+            PanelControlInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelControlInventarioLayout.createSequentialGroup()
+                .addComponent(Header3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(486, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(PanelControlInventario, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 970, 570));
+
+        PanelControlEmpleados.setBackground(new java.awt.Color(255, 255, 255));
+        PanelControlEmpleados.setEnabled(false);
+
+        Header4.setBackground(new java.awt.Color(201, 166, 107));
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel6.setText("Novedades Sary");
+
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel21.setText("Control Empleados");
+        jLabel21.setToolTipText("");
+
+        btnSettings4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnSettings4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/settings.png"))); // NOI18N
+        btnSettings4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSettings4.addActionListener(this::btnSettings4ActionPerformed);
+
+        javax.swing.GroupLayout Header4Layout = new javax.swing.GroupLayout(Header4);
+        Header4.setLayout(Header4Layout);
+        Header4Layout.setHorizontalGroup(
+            Header4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Header4Layout.createSequentialGroup()
+                .addGroup(Header4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Header4Layout.createSequentialGroup()
+                        .addGap(388, 388, 388)
+                        .addComponent(jLabel6)
+                        .addGap(344, 344, 344))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Header4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel21)
+                        .addGap(358, 358, 358)))
+                .addComponent(btnSettings4)
+                .addGap(25, 25, 25))
+        );
+        Header4Layout.setVerticalGroup(
+            Header4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Header4Layout.createSequentialGroup()
+                .addGroup(Header4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Header4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel21))
+                    .addGroup(Header4Layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(btnSettings4)))
+                .addContainerGap(15, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout PanelControlEmpleadosLayout = new javax.swing.GroupLayout(PanelControlEmpleados);
+        PanelControlEmpleados.setLayout(PanelControlEmpleadosLayout);
+        PanelControlEmpleadosLayout.setHorizontalGroup(
+            PanelControlEmpleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Header4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        PanelControlEmpleadosLayout.setVerticalGroup(
+            PanelControlEmpleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelControlEmpleadosLayout.createSequentialGroup()
+                .addComponent(Header4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(486, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(PanelControlEmpleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 970, 570));
+
+        PanelControlVehiculos.setBackground(new java.awt.Color(255, 255, 255));
+        PanelControlVehiculos.setEnabled(false);
+
+        Header5.setBackground(new java.awt.Color(201, 166, 107));
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel7.setText("Novedades Sary");
+
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel22.setText("Control Vehículos");
+        jLabel22.setToolTipText("");
+
+        btnSettings5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnSettings5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/settings.png"))); // NOI18N
+        btnSettings5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSettings5.addActionListener(this::btnSettings5ActionPerformed);
+
+        javax.swing.GroupLayout Header5Layout = new javax.swing.GroupLayout(Header5);
+        Header5.setLayout(Header5Layout);
+        Header5Layout.setHorizontalGroup(
+            Header5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Header5Layout.createSequentialGroup()
+                .addGroup(Header5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Header5Layout.createSequentialGroup()
+                        .addGap(388, 388, 388)
+                        .addComponent(jLabel7)
+                        .addGap(344, 344, 344))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Header5Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel22)
+                        .addGap(366, 366, 366)))
+                .addComponent(btnSettings5)
+                .addGap(25, 25, 25))
+        );
+        Header5Layout.setVerticalGroup(
+            Header5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Header5Layout.createSequentialGroup()
+                .addGroup(Header5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Header5Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel22))
+                    .addGroup(Header5Layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(btnSettings5)))
+                .addContainerGap(15, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout PanelControlVehiculosLayout = new javax.swing.GroupLayout(PanelControlVehiculos);
+        PanelControlVehiculos.setLayout(PanelControlVehiculosLayout);
+        PanelControlVehiculosLayout.setHorizontalGroup(
+            PanelControlVehiculosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Header5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        PanelControlVehiculosLayout.setVerticalGroup(
+            PanelControlVehiculosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelControlVehiculosLayout.createSequentialGroup()
+                .addComponent(Header5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(486, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(PanelControlVehiculos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 970, 570));
+
+        PanelControlBodegas.setBackground(new java.awt.Color(255, 255, 255));
+        PanelControlBodegas.setEnabled(false);
+
+        Header6.setBackground(new java.awt.Color(201, 166, 107));
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel8.setText("Novedades Sary");
+
+        jLabel23.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel23.setText("Control Bodegas");
+        jLabel23.setToolTipText("");
+
+        btnSettings6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnSettings6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/settings.png"))); // NOI18N
+        btnSettings6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSettings6.addActionListener(this::btnSettings6ActionPerformed);
+
+        javax.swing.GroupLayout Header6Layout = new javax.swing.GroupLayout(Header6);
+        Header6.setLayout(Header6Layout);
+        Header6Layout.setHorizontalGroup(
+            Header6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Header6Layout.createSequentialGroup()
+                .addGroup(Header6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Header6Layout.createSequentialGroup()
+                        .addGap(388, 388, 388)
+                        .addComponent(jLabel8)
+                        .addGap(344, 344, 344))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Header6Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel23)
+                        .addGap(366, 366, 366)))
+                .addComponent(btnSettings6)
+                .addGap(25, 25, 25))
+        );
+        Header6Layout.setVerticalGroup(
+            Header6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Header6Layout.createSequentialGroup()
+                .addGroup(Header6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Header6Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel23))
+                    .addGroup(Header6Layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(btnSettings6)))
+                .addContainerGap(15, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout PanelControlBodegasLayout = new javax.swing.GroupLayout(PanelControlBodegas);
+        PanelControlBodegas.setLayout(PanelControlBodegasLayout);
+        PanelControlBodegasLayout.setHorizontalGroup(
+            PanelControlBodegasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Header6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        PanelControlBodegasLayout.setVerticalGroup(
+            PanelControlBodegasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelControlBodegasLayout.createSequentialGroup()
+                .addComponent(Header6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(486, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(PanelControlBodegas, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 970, 570));
+
+        PanelControlSistema.setBackground(new java.awt.Color(255, 255, 255));
+        PanelControlSistema.setEnabled(false);
+
+        Header7.setBackground(new java.awt.Color(201, 166, 107));
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel9.setText("Novedades Sary");
+
+        jLabel24.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel24.setText("Control Sistema");
+        jLabel24.setToolTipText("");
+
+        btnSettings7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnSettings7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/settings.png"))); // NOI18N
+        btnSettings7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSettings7.addActionListener(this::btnSettings7ActionPerformed);
+
+        javax.swing.GroupLayout Header7Layout = new javax.swing.GroupLayout(Header7);
+        Header7.setLayout(Header7Layout);
+        Header7Layout.setHorizontalGroup(
+            Header7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Header7Layout.createSequentialGroup()
+                .addGroup(Header7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Header7Layout.createSequentialGroup()
+                        .addGap(388, 388, 388)
+                        .addComponent(jLabel9)
+                        .addGap(344, 344, 344))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Header7Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel24)
+                        .addGap(371, 371, 371)))
+                .addComponent(btnSettings7)
+                .addGap(25, 25, 25))
+        );
+        Header7Layout.setVerticalGroup(
+            Header7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Header7Layout.createSequentialGroup()
+                .addGroup(Header7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Header7Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel24))
+                    .addGroup(Header7Layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(btnSettings7)))
+                .addContainerGap(15, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout PanelControlSistemaLayout = new javax.swing.GroupLayout(PanelControlSistema);
+        PanelControlSistema.setLayout(PanelControlSistemaLayout);
+        PanelControlSistemaLayout.setHorizontalGroup(
+            PanelControlSistemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Header7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        PanelControlSistemaLayout.setVerticalGroup(
+            PanelControlSistemaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelControlSistemaLayout.createSequentialGroup()
+                .addComponent(Header7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(486, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(PanelControlSistema, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 970, 570));
+
+        PanelUtilerias.setBackground(new java.awt.Color(255, 255, 255));
+        PanelUtilerias.setEnabled(false);
+
+        Header8.setBackground(new java.awt.Color(201, 166, 107));
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel10.setText("Novedades Sary");
+
+        jLabel25.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel25.setText("Control Utilerías");
+        jLabel25.setToolTipText("");
+
+        btnSettings8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnSettings8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/settings.png"))); // NOI18N
+        btnSettings8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnSettings8.addActionListener(this::btnSettings8ActionPerformed);
+
+        javax.swing.GroupLayout Header8Layout = new javax.swing.GroupLayout(Header8);
+        Header8.setLayout(Header8Layout);
+        Header8Layout.setHorizontalGroup(
+            Header8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Header8Layout.createSequentialGroup()
+                .addGroup(Header8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Header8Layout.createSequentialGroup()
+                        .addGap(388, 388, 388)
+                        .addComponent(jLabel10)
+                        .addGap(344, 344, 344))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Header8Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel25)
+                        .addGap(372, 372, 372)))
+                .addComponent(btnSettings8)
+                .addGap(25, 25, 25))
+        );
+        Header8Layout.setVerticalGroup(
+            Header8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Header8Layout.createSequentialGroup()
+                .addGroup(Header8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Header8Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel25))
+                    .addGroup(Header8Layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(btnSettings8)))
+                .addContainerGap(15, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout PanelUtileriasLayout = new javax.swing.GroupLayout(PanelUtilerias);
+        PanelUtilerias.setLayout(PanelUtileriasLayout);
+        PanelUtileriasLayout.setHorizontalGroup(
+            PanelUtileriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Header8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        PanelUtileriasLayout.setVerticalGroup(
+            PanelUtileriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelUtileriasLayout.createSequentialGroup()
+                .addComponent(Header8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(486, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(PanelUtilerias, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 970, 570));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSettingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSettingsActionPerformed
         // TODO add your handling code here:
         Settings objSettings = new Settings();
+        objSettings.setLocationRelativeTo(null);
         objSettings.setVisible(true);
     }//GEN-LAST:event_btnSettingsActionPerformed
+
+    private void btnMenuCatalogosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuCatalogosMouseClicked
+        // Este es el botón de catalogos en el menu
+        PanelInicio.setVisible(false);
+        PanelControlCatalogos.setVisible(true);
+        PanelControlVentas.setVisible(false);
+        PanelControlInventario.setVisible(false);
+        PanelControlEmpleados.setVisible(false);
+        PanelControlVehiculos.setVisible(false);
+        PanelControlBodegas.setVisible(false);
+        PanelControlSistema.setVisible(false);
+        PanelUtilerias.setVisible(false);
+    }//GEN-LAST:event_btnMenuCatalogosMouseClicked
+
+    private void btnMenuInicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuInicioMouseClicked
+        // Este es el botón de inicio en el menu
+        PanelInicio.setVisible(true);
+        PanelControlCatalogos.setVisible(false);
+        PanelControlVentas.setVisible(false);
+        PanelControlInventario.setVisible(false);
+        PanelControlEmpleados.setVisible(false);
+        PanelControlVehiculos.setVisible(false);
+        PanelControlBodegas.setVisible(false);
+        PanelControlSistema.setVisible(false);
+        PanelUtilerias.setVisible(false);
+    }//GEN-LAST:event_btnMenuInicioMouseClicked
+
+    private void btnSettings1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSettings1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSettings1ActionPerformed
+
+    private void btnSettings2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSettings2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSettings2ActionPerformed
+
+    private void btnMenuControlVentasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuControlVentasMouseClicked
+        // TODO add your handling code here:
+        PanelInicio.setVisible(false);
+        PanelControlCatalogos.setVisible(false);
+        PanelControlVentas.setVisible(true);
+        PanelControlInventario.setVisible(false);
+        PanelControlEmpleados.setVisible(false);
+        PanelControlVehiculos.setVisible(false);
+        PanelControlBodegas.setVisible(false);
+        PanelControlSistema.setVisible(false);
+        PanelUtilerias.setVisible(false);
+    }//GEN-LAST:event_btnMenuControlVentasMouseClicked
+
+    private void btnSettings3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSettings3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSettings3ActionPerformed
+
+    private void btnMenuInventariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuInventariosMouseClicked
+        // TODO add your handling code here:
+        PanelInicio.setVisible(false);
+        PanelControlCatalogos.setVisible(false);
+        PanelControlVentas.setVisible(false);
+        PanelControlInventario.setVisible(true);
+        PanelControlEmpleados.setVisible(false);
+        PanelControlVehiculos.setVisible(false);
+        PanelControlBodegas.setVisible(false);
+        PanelControlSistema.setVisible(false);
+        PanelUtilerias.setVisible(false);
+    }//GEN-LAST:event_btnMenuInventariosMouseClicked
+
+    private void btnSettings4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSettings4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSettings4ActionPerformed
+
+    private void btnMenuEmpleadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuEmpleadosMouseClicked
+        // TODO add your handling code here:
+        PanelInicio.setVisible(false);
+        PanelControlCatalogos.setVisible(false);
+        PanelControlVentas.setVisible(false);
+        PanelControlInventario.setVisible(false);
+        PanelControlEmpleados.setVisible(true);
+        PanelControlVehiculos.setVisible(false);
+        PanelControlBodegas.setVisible(false);
+        PanelControlSistema.setVisible(false);
+        PanelUtilerias.setVisible(false);
+    }//GEN-LAST:event_btnMenuEmpleadosMouseClicked
+
+    private void btnSettings5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSettings5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSettings5ActionPerformed
+
+    private void btnMenuVehiculosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuVehiculosMouseClicked
+        // TODO add your handling code here:
+        PanelInicio.setVisible(false);
+        PanelControlCatalogos.setVisible(false);
+        PanelControlVentas.setVisible(false);
+        PanelControlInventario.setVisible(false);
+        PanelControlEmpleados.setVisible(false);
+        PanelControlVehiculos.setVisible(true);
+        PanelControlBodegas.setVisible(false);
+        PanelControlSistema.setVisible(false);
+        PanelUtilerias.setVisible(false);
+    }//GEN-LAST:event_btnMenuVehiculosMouseClicked
+
+    private void btnSettings6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSettings6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSettings6ActionPerformed
+
+    private void btnMenuBodegasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuBodegasMouseClicked
+        // TODO add your handling code here:
+        PanelInicio.setVisible(false);
+        PanelControlCatalogos.setVisible(false);
+        PanelControlVentas.setVisible(false);
+        PanelControlInventario.setVisible(false);
+        PanelControlEmpleados.setVisible(false);
+        PanelControlVehiculos.setVisible(false);
+        PanelControlBodegas.setVisible(true);
+        PanelControlSistema.setVisible(false);
+        PanelUtilerias.setVisible(false);
+    }//GEN-LAST:event_btnMenuBodegasMouseClicked
+
+    private void btnSettings7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSettings7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSettings7ActionPerformed
+
+    private void btnMenuControlSistemaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuControlSistemaMouseClicked
+        // TODO add your handling code here:
+        PanelInicio.setVisible(false);
+        PanelControlCatalogos.setVisible(false);
+        PanelControlVentas.setVisible(false);
+        PanelControlInventario.setVisible(false);
+        PanelControlEmpleados.setVisible(false);
+        PanelControlVehiculos.setVisible(false);
+        PanelControlBodegas.setVisible(false);
+        PanelControlSistema.setVisible(true);
+        PanelUtilerias.setVisible(false);
+    }//GEN-LAST:event_btnMenuControlSistemaMouseClicked
+
+    private void btnSettings8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSettings8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSettings8ActionPerformed
+
+    private void btnMenuUtileriasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuUtileriasMouseClicked
+        // TODO add your handling code here:
+        PanelInicio.setVisible(false);
+        PanelControlCatalogos.setVisible(false);
+        PanelControlVentas.setVisible(false);
+        PanelControlInventario.setVisible(false);
+        PanelControlEmpleados.setVisible(false);
+        PanelControlVehiculos.setVisible(false);
+        PanelControlBodegas.setVisible(false);
+        PanelControlSistema.setVisible(false);
+        PanelUtilerias.setVisible(true);
+    }//GEN-LAST:event_btnMenuUtileriasMouseClicked
 
     /**
      * @param args the command line arguments
@@ -377,9 +1141,42 @@ public class Home extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Header;
+    private javax.swing.JPanel Header1;
+    private javax.swing.JPanel Header2;
+    private javax.swing.JPanel Header3;
+    private javax.swing.JPanel Header4;
+    private javax.swing.JPanel Header5;
+    private javax.swing.JPanel Header6;
+    private javax.swing.JPanel Header7;
+    private javax.swing.JPanel Header8;
     private javax.swing.JPanel MenuLateral;
+    private javax.swing.JPanel PanelControlBodegas;
+    private javax.swing.JPanel PanelControlCatalogos;
+    private javax.swing.JPanel PanelControlEmpleados;
+    private javax.swing.JPanel PanelControlInventario;
+    private javax.swing.JPanel PanelControlSistema;
+    private javax.swing.JPanel PanelControlVehiculos;
+    private javax.swing.JPanel PanelControlVentas;
     private javax.swing.JPanel PanelInicio;
+    private javax.swing.JPanel PanelUtilerias;
+    private javax.swing.JLabel btnMenuBodegas;
+    private javax.swing.JLabel btnMenuCatalogos;
+    private javax.swing.JLabel btnMenuControlSistema;
+    private javax.swing.JLabel btnMenuControlVentas;
+    private javax.swing.JLabel btnMenuEmpleados;
+    private javax.swing.JLabel btnMenuInicio;
+    private javax.swing.JLabel btnMenuInventarios;
+    private javax.swing.JLabel btnMenuUtilerias;
+    private javax.swing.JLabel btnMenuVehiculos;
     private javax.swing.JButton btnSettings;
+    private javax.swing.JButton btnSettings1;
+    private javax.swing.JButton btnSettings2;
+    private javax.swing.JButton btnSettings3;
+    private javax.swing.JButton btnSettings4;
+    private javax.swing.JButton btnSettings5;
+    private javax.swing.JButton btnSettings6;
+    private javax.swing.JButton btnSettings7;
+    private javax.swing.JButton btnSettings8;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -391,11 +1188,18 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
