@@ -43,7 +43,7 @@ public class Login extends javax.swing.JFrame {
         btnIngresar1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Novedades Sary Login");
+        setTitle("Novedades Sary | Login");
         setBackground(new java.awt.Color(255, 255, 255));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
