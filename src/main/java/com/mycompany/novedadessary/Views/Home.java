@@ -55,12 +55,12 @@ public class Home extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         PanelInicio = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnCapturarAbono = new javax.swing.JButton();
+        btnDescuento = new javax.swing.JButton();
+        btnCuentasAtrasadas = new javax.swing.JButton();
+        btnConsultaSaldo = new javax.swing.JButton();
+        btnNuevaVenta = new javax.swing.JButton();
+        btnNuevoCliente = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         Header = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -72,6 +72,9 @@ public class Home extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         btnSettings1 = new javax.swing.JButton();
+        btnCrearCliente = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         PanelControlVentas = new javax.swing.JPanel();
         Header2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -234,6 +237,7 @@ public class Home extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/user-white.png"))); // NOI18N
         jLabel2.setText("Usuario");
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(98, 102, 93));
@@ -313,35 +317,43 @@ public class Home extends javax.swing.JFrame {
         PanelInicio.setBackground(new java.awt.Color(255, 255, 255));
         PanelInicio.setEnabled(false);
 
-        jButton2.setBackground(new java.awt.Color(21, 101, 192));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Capturar Abono");
+        btnCapturarAbono.setBackground(new java.awt.Color(21, 101, 192));
+        btnCapturarAbono.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnCapturarAbono.setForeground(new java.awt.Color(255, 255, 255));
+        btnCapturarAbono.setText("Capturar Abono");
+        btnCapturarAbono.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCapturarAbono.addActionListener(this::btnCapturarAbonoActionPerformed);
 
-        jButton5.setBackground(new java.awt.Color(106, 27, 154));
-        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Descuento");
+        btnDescuento.setBackground(new java.awt.Color(106, 27, 154));
+        btnDescuento.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnDescuento.setForeground(new java.awt.Color(255, 255, 255));
+        btnDescuento.setText("Descuento");
+        btnDescuento.addActionListener(this::btnDescuentoActionPerformed);
 
-        jButton6.setBackground(new java.awt.Color(198, 40, 40));
-        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("Cuentas atrasadas");
+        btnCuentasAtrasadas.setBackground(new java.awt.Color(198, 40, 40));
+        btnCuentasAtrasadas.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnCuentasAtrasadas.setForeground(new java.awt.Color(255, 255, 255));
+        btnCuentasAtrasadas.setText("Cuentas Atrasadas");
+        btnCuentasAtrasadas.addActionListener(this::btnCuentasAtrasadasActionPerformed);
 
-        jButton3.setBackground(new java.awt.Color(0, 131, 143));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText(" Consulta De Saldo");
+        btnConsultaSaldo.setBackground(new java.awt.Color(0, 131, 143));
+        btnConsultaSaldo.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnConsultaSaldo.setForeground(new java.awt.Color(255, 255, 255));
+        btnConsultaSaldo.setText(" Consulta De Saldo");
+        btnConsultaSaldo.addActionListener(this::btnConsultaSaldoActionPerformed);
 
-        jButton1.setBackground(new java.awt.Color(46, 125, 50));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Nueva Venta");
+        btnNuevaVenta.setBackground(new java.awt.Color(46, 125, 50));
+        btnNuevaVenta.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnNuevaVenta.setForeground(new java.awt.Color(255, 255, 255));
+        btnNuevaVenta.setText("Nueva Venta");
+        btnNuevaVenta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnNuevaVenta.addActionListener(this::btnNuevaVentaActionPerformed);
 
-        jButton4.setBackground(new java.awt.Color(239, 108, 0));
-        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Nuevo Cliente");
+        btnNuevoCliente.setBackground(new java.awt.Color(239, 108, 0));
+        btnNuevoCliente.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        btnNuevoCliente.setForeground(new java.awt.Color(255, 255, 255));
+        btnNuevoCliente.setText("Nuevo Cliente");
+        btnNuevoCliente.addActionListener(this::btnNuevoClienteActionPerformed);
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel11.setText("Acciones rápidas:");
@@ -405,16 +417,16 @@ public class Home extends javax.swing.JFrame {
                         .addComponent(jLabel15)
                         .addGroup(PanelInicioLayout.createSequentialGroup()
                             .addGroup(PanelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton4))
+                                .addComponent(btnNuevaVenta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnNuevoCliente))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addGroup(PanelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton2))
+                                .addComponent(btnDescuento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnCapturarAbono))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addGroup(PanelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                .addComponent(btnConsultaSaldo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnCuentasAtrasadas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addGap(20, 20, 20))
         );
         PanelInicioLayout.setVerticalGroup(
@@ -426,16 +438,16 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(PanelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PanelInicioLayout.createSequentialGroup()
                         .addGap(1, 1, 1)
-                        .addComponent(jButton3))
+                        .addComponent(btnConsultaSaldo))
                     .addGroup(PanelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton1)
-                        .addComponent(jButton2)))
+                        .addComponent(btnNuevaVenta)
+                        .addComponent(btnCapturarAbono)))
                 .addGap(18, 18, 18)
                 .addGroup(PanelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton4)
+                    .addComponent(btnNuevoCliente)
                     .addGroup(PanelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton5)
-                        .addComponent(jButton6)))
+                        .addComponent(btnDescuento)
+                        .addComponent(btnCuentasAtrasadas)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addComponent(jLabel15)
                 .addContainerGap())
@@ -492,17 +504,48 @@ public class Home extends javax.swing.JFrame {
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
+        btnCrearCliente.setBackground(new java.awt.Color(21, 101, 192));
+        btnCrearCliente.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnCrearCliente.setForeground(new java.awt.Color(255, 255, 255));
+        btnCrearCliente.setText("Nuevo Cliente");
+        btnCrearCliente.addActionListener(this::btnCrearClienteActionPerformed);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, "", null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "F. U.VTA", "Cuenta", "Cliente", "Domicilio", "Teléfono", "Moroso", "Observaciones", "Acciones"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
         javax.swing.GroupLayout PanelControlCatalogosLayout = new javax.swing.GroupLayout(PanelControlCatalogos);
         PanelControlCatalogos.setLayout(PanelControlCatalogosLayout);
         PanelControlCatalogosLayout.setHorizontalGroup(
             PanelControlCatalogosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(Header1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelControlCatalogosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(PanelControlCatalogosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1)
+                    .addGroup(PanelControlCatalogosLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnCrearCliente)))
+                .addGap(23, 23, 23))
         );
         PanelControlCatalogosLayout.setVerticalGroup(
             PanelControlCatalogosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelControlCatalogosLayout.createSequentialGroup()
                 .addComponent(Header1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(486, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnCrearCliente)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         getContentPane().add(PanelControlCatalogos, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 970, 570));
@@ -993,6 +1036,9 @@ public class Home extends javax.swing.JFrame {
 
     private void btnSettings1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSettings1ActionPerformed
         // TODO add your handling code here:
+        Settings objSettings = new Settings();
+        objSettings.setLocationRelativeTo(null);
+        objSettings.setVisible(true);
     }//GEN-LAST:event_btnSettings1ActionPerformed
 
     private void btnSettings2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSettings2ActionPerformed
@@ -1114,6 +1160,55 @@ public class Home extends javax.swing.JFrame {
         PanelUtilerias.setVisible(true);
     }//GEN-LAST:event_btnMenuUtileriasMouseClicked
 
+    private void btnNuevaVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevaVentaActionPerformed
+        // TODO add your handling code here:
+        NuevaVenta objNuevaVenta = new NuevaVenta();
+        objNuevaVenta.setLocationRelativeTo(null);
+        objNuevaVenta.setVisible(true);
+    }//GEN-LAST:event_btnNuevaVentaActionPerformed
+
+    private void btnCapturarAbonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCapturarAbonoActionPerformed
+        // TODO add your handling code here:
+        CapturarAbono objCapturarAbono = new CapturarAbono();
+        objCapturarAbono.setLocationRelativeTo(null);
+        objCapturarAbono.setVisible(true);
+    }//GEN-LAST:event_btnCapturarAbonoActionPerformed
+
+    private void btnConsultaSaldoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultaSaldoActionPerformed
+        // TODO add your handling code here:
+        ConsultaSaldo objConsultaSaldo = new ConsultaSaldo();
+        objConsultaSaldo.setLocationRelativeTo(null);
+        objConsultaSaldo.setVisible(true);
+    }//GEN-LAST:event_btnConsultaSaldoActionPerformed
+
+    private void btnNuevoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoClienteActionPerformed
+        // TODO add your handling code here:
+        NuevoCliente objNuevoCliente = new NuevoCliente();
+        objNuevoCliente.setLocationRelativeTo(null);
+        objNuevoCliente.setVisible(true);
+    }//GEN-LAST:event_btnNuevoClienteActionPerformed
+
+    private void btnDescuentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDescuentoActionPerformed
+        // TODO add your handling code here:
+        Descuento objDescuento = new Descuento();
+        objDescuento.setLocationRelativeTo(null);
+        objDescuento.setVisible(true);
+    }//GEN-LAST:event_btnDescuentoActionPerformed
+
+    private void btnCuentasAtrasadasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCuentasAtrasadasActionPerformed
+        // TODO add your handling code here:
+        CuentasAtrasadas objCuentasAtrasadas = new CuentasAtrasadas();
+        objCuentasAtrasadas.setLocationRelativeTo(null);
+        objCuentasAtrasadas.setVisible(true);
+    }//GEN-LAST:event_btnCuentasAtrasadasActionPerformed
+
+    private void btnCrearClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearClienteActionPerformed
+        // TODO add your handling code here:
+        NuevoCliente objNuevoCliente = new NuevoCliente();
+        objNuevoCliente.setLocationRelativeTo(null);
+        objNuevoCliente.setVisible(true);
+    }//GEN-LAST:event_btnCrearClienteActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1159,6 +1254,11 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel PanelControlVentas;
     private javax.swing.JPanel PanelInicio;
     private javax.swing.JPanel PanelUtilerias;
+    private javax.swing.JButton btnCapturarAbono;
+    private javax.swing.JButton btnConsultaSaldo;
+    private javax.swing.JButton btnCrearCliente;
+    private javax.swing.JButton btnCuentasAtrasadas;
+    private javax.swing.JButton btnDescuento;
     private javax.swing.JLabel btnMenuBodegas;
     private javax.swing.JLabel btnMenuCatalogos;
     private javax.swing.JLabel btnMenuControlSistema;
@@ -1168,6 +1268,8 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel btnMenuInventarios;
     private javax.swing.JLabel btnMenuUtilerias;
     private javax.swing.JLabel btnMenuVehiculos;
+    private javax.swing.JButton btnNuevaVenta;
+    private javax.swing.JButton btnNuevoCliente;
     private javax.swing.JButton btnSettings;
     private javax.swing.JButton btnSettings1;
     private javax.swing.JButton btnSettings2;
@@ -1177,12 +1279,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton btnSettings6;
     private javax.swing.JButton btnSettings7;
     private javax.swing.JButton btnSettings8;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1210,5 +1306,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
