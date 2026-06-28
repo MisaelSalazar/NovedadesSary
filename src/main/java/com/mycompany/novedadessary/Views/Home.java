@@ -88,6 +88,9 @@ public class Home extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         btnSettings3 = new javax.swing.JButton();
+        btnNuevoArticulo = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
         PanelControlEmpleados = new javax.swing.JPanel();
         Header4 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
@@ -697,17 +700,49 @@ public class Home extends javax.swing.JFrame {
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
+        btnNuevoArticulo.setBackground(new java.awt.Color(21, 101, 192));
+        btnNuevoArticulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnNuevoArticulo.setForeground(new java.awt.Color(255, 255, 255));
+        btnNuevoArticulo.setText("Nuevo Artículo");
+        btnNuevoArticulo.addActionListener(this::btnNuevoArticuloActionPerformed);
+
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"Hola", "asasa", "assasa", "sasasasa", "asasasa", "asasasas", "asasasas", "dfdfdfdf", "dfdfdffdf", "fdfdfdfdf", "dffdfdfdfdf", "dfdfdfdf"},
+                {null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Artículo", "ID", "Precio", "Enganche", "Abono", "M", "Contado", "1M", "2M", "3M", "Código", "Acciones"
+            }
+        ));
+        jScrollPane3.setViewportView(jTable3);
+
         javax.swing.GroupLayout PanelControlInventarioLayout = new javax.swing.GroupLayout(PanelControlInventario);
         PanelControlInventario.setLayout(PanelControlInventarioLayout);
         PanelControlInventarioLayout.setHorizontalGroup(
             PanelControlInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(Header3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelControlInventarioLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(PanelControlInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelControlInventarioLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnNuevoArticulo)))
+                .addGap(25, 25, 25))
         );
         PanelControlInventarioLayout.setVerticalGroup(
             PanelControlInventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelControlInventarioLayout.createSequentialGroup()
                 .addComponent(Header3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(486, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnNuevoArticulo)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         getContentPane().add(PanelControlInventario, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 970, 570));
@@ -1097,6 +1132,9 @@ public class Home extends javax.swing.JFrame {
 
     private void btnSettings3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSettings3ActionPerformed
         // TODO add your handling code here:
+        Settings objSettings = new Settings();
+        objSettings.setLocationRelativeTo(null);
+        objSettings.setVisible(true);
     }//GEN-LAST:event_btnSettings3ActionPerformed
 
     private void btnMenuInventariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuInventariosMouseClicked
@@ -1253,6 +1291,13 @@ public class Home extends javax.swing.JFrame {
         objNuevaVenta.setVisible(true);
     }//GEN-LAST:event_btnCrearVentaActionPerformed
 
+    private void btnNuevoArticuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoArticuloActionPerformed
+        // TODO add your handling code here:
+        NuevoArticulo objNuevoArticulo = new NuevoArticulo();
+        objNuevoArticulo.setLocationRelativeTo(null);
+        objNuevoArticulo.setVisible(true);
+    }//GEN-LAST:event_btnNuevoArticuloActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1314,6 +1359,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel btnMenuUtilerias;
     private javax.swing.JLabel btnMenuVehiculos;
     private javax.swing.JButton btnNuevaVenta;
+    private javax.swing.JButton btnNuevoArticulo;
     private javax.swing.JButton btnNuevoCliente;
     private javax.swing.JButton btnSettings;
     private javax.swing.JButton btnSettings1;
@@ -1353,7 +1399,9 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
     // End of variables declaration//GEN-END:variables
 }
