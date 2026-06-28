@@ -80,6 +80,9 @@ public class Home extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         btnSettings2 = new javax.swing.JButton();
+        btnCrearVenta = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
         PanelControlInventario = new javax.swing.JPanel();
         Header3 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -599,17 +602,48 @@ public class Home extends javax.swing.JFrame {
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
+        btnCrearVenta.setBackground(new java.awt.Color(21, 101, 192));
+        btnCrearVenta.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnCrearVenta.setForeground(new java.awt.Color(255, 255, 255));
+        btnCrearVenta.setText("Nueva Venta");
+        btnCrearVenta.addActionListener(this::btnCrearVentaActionPerformed);
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Cuenta", "Venta", "F.VTA", "Cliente", "Domicilio", "PZA", "Articulo", "IMP", "COM", "ENG", "E-PTE", "PS", "E-ENG", "Acciones"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
+
         javax.swing.GroupLayout PanelControlVentasLayout = new javax.swing.GroupLayout(PanelControlVentas);
         PanelControlVentas.setLayout(PanelControlVentasLayout);
         PanelControlVentasLayout.setHorizontalGroup(
             PanelControlVentasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(Header2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelControlVentasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(PanelControlVentasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelControlVentasLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnCrearVenta)))
+                .addGap(25, 25, 25))
         );
         PanelControlVentasLayout.setVerticalGroup(
             PanelControlVentasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelControlVentasLayout.createSequentialGroup()
                 .addComponent(Header2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(486, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnCrearVenta)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         getContentPane().add(PanelControlVentas, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 970, 570));
@@ -1043,6 +1077,9 @@ public class Home extends javax.swing.JFrame {
 
     private void btnSettings2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSettings2ActionPerformed
         // TODO add your handling code here:
+        Settings objSettings = new Settings();
+        objSettings.setLocationRelativeTo(null);
+        objSettings.setVisible(true);
     }//GEN-LAST:event_btnSettings2ActionPerformed
 
     private void btnMenuControlVentasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuControlVentasMouseClicked
@@ -1209,6 +1246,13 @@ public class Home extends javax.swing.JFrame {
         objNuevoCliente.setVisible(true);
     }//GEN-LAST:event_btnCrearClienteActionPerformed
 
+    private void btnCrearVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearVentaActionPerformed
+        // TODO add your handling code here:
+        NuevaVenta objNuevaVenta = new NuevaVenta();
+        objNuevaVenta.setLocationRelativeTo(null);
+        objNuevaVenta.setVisible(true);
+    }//GEN-LAST:event_btnCrearVentaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1257,6 +1301,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton btnCapturarAbono;
     private javax.swing.JButton btnConsultaSaldo;
     private javax.swing.JButton btnCrearCliente;
+    private javax.swing.JButton btnCrearVenta;
     private javax.swing.JButton btnCuentasAtrasadas;
     private javax.swing.JButton btnDescuento;
     private javax.swing.JLabel btnMenuBodegas;
@@ -1307,6 +1352,8 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
     // End of variables declaration//GEN-END:variables
 }
