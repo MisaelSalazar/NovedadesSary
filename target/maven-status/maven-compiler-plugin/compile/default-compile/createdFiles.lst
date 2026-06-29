@@ -1,8 +1,10 @@
 com\mycompany\novedadessary\Views\Home$7.class
 com\mycompany\novedadessary\Views\Login.class
 com\mycompany\novedadessary\Views\Descuento.class
+com\mycompany\novedadessary\Views\InventarioVendedores.class
 com\mycompany\novedadessary\Views\NuevoArticulo.class
 com\mycompany\novedadessary\Views\CuentasAtrasadas.class
+com\mycompany\novedadessary\Views\NuevoVendedor.class
 com\mycompany\novedadessary\Views\Home$5.class
 com\mycompany\novedadessary\Views\Home.class
 com\mycompany\novedadessary\Views\Home$2.class

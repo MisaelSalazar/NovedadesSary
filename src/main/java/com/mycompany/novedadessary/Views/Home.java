@@ -96,6 +96,10 @@ public class Home extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         btnSettings4 = new javax.swing.JButton();
+        btnNuevoVendedor = new javax.swing.JToggleButton();
+        btnInventarioVendedores = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTable4 = new javax.swing.JTable();
         PanelControlVehiculos = new javax.swing.JPanel();
         Header5 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
@@ -796,17 +800,58 @@ public class Home extends javax.swing.JFrame {
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
+        btnNuevoVendedor.setBackground(new java.awt.Color(21, 101, 192));
+        btnNuevoVendedor.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnNuevoVendedor.setForeground(new java.awt.Color(255, 255, 255));
+        btnNuevoVendedor.setText("Nuevo Vendedor");
+        btnNuevoVendedor.addActionListener(this::btnNuevoVendedorActionPerformed);
+
+        btnInventarioVendedores.setBackground(new java.awt.Color(46, 125, 50));
+        btnInventarioVendedores.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnInventarioVendedores.setForeground(new java.awt.Color(255, 255, 255));
+        btnInventarioVendedores.setText("Inventario Vendedores");
+        btnInventarioVendedores.addActionListener(this::btnInventarioVendedoresActionPerformed);
+
+        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "ID", "Vendedor", "Domicilio", "Teléfono", "Observaciones", "Acciones"
+            }
+        ));
+        jScrollPane4.setViewportView(jTable4);
+
         javax.swing.GroupLayout PanelControlEmpleadosLayout = new javax.swing.GroupLayout(PanelControlEmpleados);
         PanelControlEmpleados.setLayout(PanelControlEmpleadosLayout);
         PanelControlEmpleadosLayout.setHorizontalGroup(
             PanelControlEmpleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(Header4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelControlEmpleadosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(PanelControlEmpleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelControlEmpleadosLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnInventarioVendedores)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnNuevoVendedor)))
+                .addGap(22, 22, 22))
         );
         PanelControlEmpleadosLayout.setVerticalGroup(
             PanelControlEmpleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelControlEmpleadosLayout.createSequentialGroup()
                 .addComponent(Header4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(486, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(PanelControlEmpleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnNuevoVendedor)
+                    .addComponent(btnInventarioVendedores))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         getContentPane().add(PanelControlEmpleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 970, 570));
@@ -1152,6 +1197,9 @@ public class Home extends javax.swing.JFrame {
 
     private void btnSettings4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSettings4ActionPerformed
         // TODO add your handling code here:
+        Settings objSettings = new Settings();
+        objSettings.setLocationRelativeTo(null);
+        objSettings.setVisible(true);
     }//GEN-LAST:event_btnSettings4ActionPerformed
 
     private void btnMenuEmpleadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuEmpleadosMouseClicked
@@ -1298,6 +1346,20 @@ public class Home extends javax.swing.JFrame {
         objNuevoArticulo.setVisible(true);
     }//GEN-LAST:event_btnNuevoArticuloActionPerformed
 
+    private void btnNuevoVendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoVendedorActionPerformed
+        // TODO add your handling code here:
+        NuevoVendedor objNuevoVendedor = new NuevoVendedor();
+        objNuevoVendedor.setLocationRelativeTo(null);
+        objNuevoVendedor.setVisible(true);
+    }//GEN-LAST:event_btnNuevoVendedorActionPerformed
+
+    private void btnInventarioVendedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInventarioVendedoresActionPerformed
+        // TODO add your handling code here:
+        InventarioVendedores objInventarioVendedores = new InventarioVendedores();
+        objInventarioVendedores.setLocationRelativeTo(null);
+        objInventarioVendedores.setVisible(true);
+    }//GEN-LAST:event_btnInventarioVendedoresActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1349,6 +1411,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton btnCrearVenta;
     private javax.swing.JButton btnCuentasAtrasadas;
     private javax.swing.JButton btnDescuento;
+    private javax.swing.JButton btnInventarioVendedores;
     private javax.swing.JLabel btnMenuBodegas;
     private javax.swing.JLabel btnMenuCatalogos;
     private javax.swing.JLabel btnMenuControlSistema;
@@ -1361,6 +1424,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton btnNuevaVenta;
     private javax.swing.JButton btnNuevoArticulo;
     private javax.swing.JButton btnNuevoCliente;
+    private javax.swing.JToggleButton btnNuevoVendedor;
     private javax.swing.JButton btnSettings;
     private javax.swing.JButton btnSettings1;
     private javax.swing.JButton btnSettings2;
@@ -1400,8 +1464,10 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
+    private javax.swing.JTable jTable4;
     // End of variables declaration//GEN-END:variables
 }
