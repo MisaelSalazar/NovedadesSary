@@ -83,6 +83,7 @@ public class Home extends javax.swing.JFrame {
         btnCrearVenta = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
+        btnAbonos = new javax.swing.JButton();
         PanelControlInventario = new javax.swing.JPanel();
         Header3 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -628,6 +629,12 @@ public class Home extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTable2);
 
+        btnAbonos.setBackground(new java.awt.Color(46, 125, 50));
+        btnAbonos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnAbonos.setForeground(new java.awt.Color(255, 255, 255));
+        btnAbonos.setText("Ver Abonos");
+        btnAbonos.addActionListener(this::btnAbonosActionPerformed);
+
         javax.swing.GroupLayout PanelControlVentasLayout = new javax.swing.GroupLayout(PanelControlVentas);
         PanelControlVentas.setLayout(PanelControlVentasLayout);
         PanelControlVentasLayout.setHorizontalGroup(
@@ -639,6 +646,8 @@ public class Home extends javax.swing.JFrame {
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PanelControlVentasLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnAbonos)
+                        .addGap(18, 18, 18)
                         .addComponent(btnCrearVenta)))
                 .addGap(25, 25, 25))
         );
@@ -647,7 +656,9 @@ public class Home extends javax.swing.JFrame {
             .addGroup(PanelControlVentasLayout.createSequentialGroup()
                 .addComponent(Header2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnCrearVenta)
+                .addGroup(PanelControlVentasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCrearVenta)
+                    .addComponent(btnAbonos))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -1360,6 +1371,13 @@ public class Home extends javax.swing.JFrame {
         objInventarioVendedores.setVisible(true);
     }//GEN-LAST:event_btnInventarioVendedoresActionPerformed
 
+    private void btnAbonosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbonosActionPerformed
+        // TODO add your handling code here:
+        Abonos objAbonos = new Abonos();
+        objAbonos.setLocationRelativeTo(null);
+        objAbonos.setVisible(true);
+    }//GEN-LAST:event_btnAbonosActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1405,6 +1423,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel PanelControlVentas;
     private javax.swing.JPanel PanelInicio;
     private javax.swing.JPanel PanelUtilerias;
+    private javax.swing.JButton btnAbonos;
     private javax.swing.JButton btnCapturarAbono;
     private javax.swing.JButton btnConsultaSaldo;
     private javax.swing.JButton btnCrearCliente;
